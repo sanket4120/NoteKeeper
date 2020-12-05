@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserrat, sans-serif;
+  font-weight: lighter;
+}
+
+body {
+  background-color: #d0e8f2;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+i,
+button {
+  cursor: pointer;
+}
+
+#filter {
+  border: 2px chocolate solid;
+  outline: none;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.add_note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.add_note textarea {
+  border: 2px chocolate solid;
+  padding: 1rem;
+  outline: none;
+  width: 80%;
+  resize: none;
+  background: transparent;
+  font-size: 1rem;
+}
+
+#add {
+  border: none;
+  outline: none;
+  background-color: chocolate;
+  padding: 10px 15px;
+  color: #fff;
+  /* border-radius: 5px; */
+  margin-top: 5px;
+}
+
+.notes {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.note {
+  border: 2px chocolate solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.note_top {
+  border-bottom: 1px gray solid;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.update {
+  color: chocolate;
+}
+
+.note_top span span {
+  margin: 0 3px;
+}
+
+@media (max-width: 1170px) {
+  .notes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .notes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .add_note {
+    width: 100%;
+  }
+}
+@media (max-width: 580px) {
+  .notes {
+    grid-template-columns: 1fr;
+  }
+  .add_note textarea {
+    width: 100%;
+  }
+}
